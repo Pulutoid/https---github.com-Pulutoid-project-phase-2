@@ -6,18 +6,18 @@ This is a simple journal website created using HTML, CSS, and Bootstrap. The pur
 
 ## Features
 
-<li>Responsive design that works well on different screen sizes</li>
-<li>Navigation bar that allows users to easily access different pages on the website</li>
-<li>Home page that displays the latest journal entries</li>
-<li>Archive page that displays all previous journal entries</li>
-<li>About page that provides information about the website and the author</li>
+- Responsive design that works well on different screen sizes
+- Navigation bar that allows users to easily access different pages on the website
+- Home page that displays the latest journal entries
+- Archive page that displays all previous journal entries
+- About page that provides information about the website and the author
 <br>
 
 ## Technologies Used
 
-<li>HTML</li>
-<li>CSS</li>
-<li>Bootstrap</li>
+- HTML
+- CSS
+- Bootstrap
 
 ## Getting Started
 
