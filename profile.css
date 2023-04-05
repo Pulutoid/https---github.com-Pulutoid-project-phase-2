@@ -1,4 +1,8 @@
+* {
 
+    font-size: 1.5rem;
+
+}
 
 #rootDiv {
 
@@ -42,15 +46,15 @@
 
 }
 
-.labelDiv {
+/* .labelDiv {
 
 
 
-    font-size: 3rem;
+    font-size: 1.5rem;
 
 
 
-}
+} */
 .contentDiv {
 
     background-color: aliceblue;
@@ -62,17 +66,26 @@
 
 }
 
+#profile_details_div {
+
+align-content: center;
+    /* align-items: center; */
+
+
+}
+
 .contentArea {
 
     width: 100%;
-    height: 5rem;
+    height: 3rem;
     resize: none;
-    font-size: 3rem;
+    /* font-size: 2rem; */
     border-radius: 30px;
     border-style: none;
     scroll-behavior: none;
     overflow: hidden;
 }
+
 
 #profilePic {
 
@@ -85,13 +98,15 @@
     
 }
 
+
+
 #backButton {
 
     margin-left: 5%;
     margin-top: 10%;
     width: 30%;
     height: 8%;
-    font-size: 3rem;
+    /* font-size: 3rem; */
     border-radius: 30px;
     border-style: none;
 
