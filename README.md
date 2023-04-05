@@ -32,3 +32,12 @@ If you would like to contribute to this project, feel free to open a pull reques
 License
 
 This project is licensed under the MIT License. See the LICENSE file for more information.
+
+
+HOW TO RUN: 
+
+option 1:
+simply open this website: 
+https://pulutoid.github.io/https---github.com-Pulutoid-project-phase-2/
+option 2:
+run index.html through your browser as you would with any other localhost html.
