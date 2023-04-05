@@ -2,12 +2,13 @@
     /* A rectangle for the journals/ideas */
     display: block;
     height: 70vh;
-    width: 50vw;
+    width: 45vw;
     border-radius: 25px;
     background-color: #fceee5;
     position: relative;
     z-index: 9999;
     margin-left: 10vw;
     margin-top: 10vh;
+    margin-right: 10vh;
 
-  }
+  } 
