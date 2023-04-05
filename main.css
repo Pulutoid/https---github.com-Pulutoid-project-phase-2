@@ -5,9 +5,11 @@
   position: relative;
 }
 
-
-.main-container {
-  min-height: 100vh;
+#background {
+  background-image: url(img/pexels-fwstudio-1297321.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1024px;
 }
 
 .logo {
@@ -88,17 +90,7 @@
   cursor: pointer;
 }
 
-.background {
-  top: 0px;
-  left: 0px;
-  width: 1440px;
-  height: 1024px;
-  position: absolute;
-}
-
-
 .idea {
-
   top: 147px;
   /* left: 221px; */
   width: 279px;
@@ -152,8 +144,7 @@
   width: 282px;
   height: 1024px;
   position: absolute;
-  right: 0;
-
+  right: -9px;
 }
 
 .navBarBackground {
