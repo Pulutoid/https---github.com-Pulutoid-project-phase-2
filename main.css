@@ -94,22 +94,34 @@
 }
 
 
-.idea1 {
+.idea {
+
   top: 147px;
-  left: 221px;
+  /* left: 221px; */
   width: 279px;
   height: 254px;
-  padding: 0;
+  /* padding: 0; */
   position: absolute;
+
+
+  
+}
+.idea1 {
+  /* top: 147px; */
+  left: 221px;
+  /* width: 279px; */
+  /* height: 254px; */
+  padding: 0;
+  /* position: absolute; */
 
 }
 
 .idea2 {
-  top: 147px;
+  /* top: 147px; */
   left: 720px;
-  width: 279px;
-  height: 254px;
-  position: absolute;
+  /* width: 279px; */
+  /* height: 254px; */
+  /* position: absolute; */
 }
 
 .body {
@@ -133,10 +145,11 @@
 
 .navBar {
   top: 0px;
-  left: 1166px;
+  /* left: 1166px; */
   width: 282px;
   height: 1024px;
   position: absolute;
+  right: 0;
 
 }
 
