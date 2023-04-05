@@ -40,4 +40,6 @@ option 1:
 simply open this website: 
 https://pulutoid.github.io/https---github.com-Pulutoid-project-phase-2/
 option 2:
+
+
 run index.html through your browser as you would with any other localhost html.
