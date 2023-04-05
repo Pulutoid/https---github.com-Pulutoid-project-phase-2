@@ -39,6 +39,9 @@ HOW TO RUN:
 option 1:
 simply open this website: 
 https://pulutoid.github.io/https---github.com-Pulutoid-project-phase-2/
+
+
+
 option 2:
 
 
