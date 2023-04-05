@@ -96,3 +96,19 @@
     border-style: none;
 
 }
+
+
+@media only screen and (max-width: 600px) {
+    #rootDiv{
+    display:flex; 
+    flex-direction: column;
+        padding: 0;
+    }
+
+    #rootDiv * {
+
+        justify-self: center;
+        scale: 0.8;
+    }
+
+}
