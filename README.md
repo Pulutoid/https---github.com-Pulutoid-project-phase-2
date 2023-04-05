@@ -17,7 +17,7 @@ This is a simple journal website created using HTML, CSS, and Bootstrap. The pur
 
 - HTML
 - CSS
-- Bootstrap
+- Javascript
 
 ## Getting Started
 
