@@ -84,6 +84,9 @@
   background-color: #fceee5;
 }
 
+ .idea:hover {
+  cursor: pointer;
+}
 
 .background {
   top: 0px;
