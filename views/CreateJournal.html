@@ -97,48 +97,50 @@
 
 <body>
 	<h1>Create a Journal</h1>
-	<div id="title-box">
-		<textarea id="title-textarea"></textarea>
-	</div>
-	<div id="description-box">
-		<textarea id="description-textarea"></textarea>
-	</div>
-	<div id="journal-box">
-		<textarea id="journal-textarea"></textarea>
-	</div>
-	<div class="btn-wrapper">
-		<a href="/" class="btn">Back</a>
-		<a href="#" class="btn">Save</a>
-	</div>
+	<form id='articleForm' method='post'>
+		<div id="title-box">
+			<Label for='title' class='' id='titleLabel'> Title </Label>
+			<input type='text' class='ElementOfArticleCreation' id='title-textarea' name='title'
+				value='{{article.title}}'>
+		</div>
+		<div id="description-box">
+			<Label for='description' class='' id='descriptionLabel'> Description </Label>
+			<textarea name='description' class='ElementOfArticleCreation'
+				id='description-textarea'> {{article.description}} </textarea>
+		</div>
+		<div id="journal-box">
+			<Label for='content' class='' id='journalLabel'> </Label>
+			<textarea name='content' class='journal-box' id='journal-textarea' rows=10> {{article.content}} </textarea>
+		</div>
+		<button type='submit' class='ElementOfArticleCreation Button' id='submitButton'> Create </button>
+	</form>
 </body>
-
 <script>
-
-	function constructObjectFromForm() {
-
-		console.log('constructObjectFromForm()')
-
-		const title = document.getElementById("title-textarea").value;
-
-		const description = document.getElementById("description-textarea").value;
-
-		const journal = document.getElementById("journal-textarea").value;
-
-		const data = {
-
-			title: title,
-
-			description: description,
-			journal: journal
-
+	document.getElementById("submitButton").addEventListener("click", async (event) => {
+		event.preventDefault();
+		function constructObjectFromForm() {
+			const title = document.getElementById("title-textarea").value;
+			const description = document.getElementById("description-textarea").value;
+			const journal = document.getElementById("journal-textarea").value;
+			const data = {
+				// id: (Math.floor(Math.random() * (99999999 - 10 + 1)) + 10),
+				userID: 1,
+				title: title,
+				description: description,
+				journal: journal,
+				files: 0
+			};
+			return data;
 		}
-
-		console.log("extracted data object is ");
-		console.log(data)
-		return data;
-
-	}
-
+		let userID = 1;
+		let response = await fetch(`/newJournal/${userID}`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(constructObjectFromForm())
+		});
+	});
 </script>
 
 </html>

@@ -35,10 +35,21 @@ async function getProfile(profile_id) {
 }
 
 
+async function addJournal(journalData) {
+    const db = await openConnectionToDB();
+    // insert article_data into articles table
+    // console.log(`trying to create an article with the id ${article_data.id}`)
+    const result = await db.run('INSERT INTO journals (userID, title, description, text, files, isJournal, isIdea) VALUES (?, ?, ?, ?, ?, 1, 0)', [journalData.userID, journalData.title, journalData.description, journalData.text, journalData.files]);
+
+    // return metadata about the inserted row
+    return result;
+
+}
 
 module.exports = {
     openConnectionToDB,
     getAllJournals,
-    getProfile
+    getProfile,
+    addJournal
 
 };
