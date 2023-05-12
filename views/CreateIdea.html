@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Create an Idea</title>
+	<title>Create a idea</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -17,7 +17,28 @@
 			margin-top: 50px;
 		}
 
-		#idea-box {
+		#title-box {
+			margin: 0 auto;
+
+			width: 80%;
+			max-width: 800px;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		#title-textarea {
+			width: 70%;
+			height: 100px;
+			resize: none;
+			box-sizing: border-box;
+			padding: 10px;
+			font-size: 16px;
+			align-self: center;
+
+		}
+
+
+		#description-box {
 			margin: 0 auto;
 			width: 80%;
 			max-width: 800px;
@@ -25,10 +46,28 @@
 			border-radius: 5px;
 		}
 
-		#idea-textarea {
+		#description-textarea {
 			width: 100%;
-			height: 200px;
+			height: 100px;
 			resize: none;
+			box-sizing: border-box;
+			padding: 10px;
+			font-size: 16px;
+		}
+
+
+		#journal-box {
+			margin: 0 auto;
+			width: 80%;
+			max-width: 800px;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		#journal-textarea {
+			width: 100%;
+			height: 300px;
+			resize: true;
 			box-sizing: border-box;
 			padding: 10px;
 			font-size: 16px;
@@ -57,14 +96,51 @@
 </head>
 
 <body>
-	<h1>Create an Idea</h1>
-	<div id="idea-box">
-		<textarea id="idea-textarea"></textarea>
-	</div>
-	<div class="btn-wrapper">
-		<a href="/" class="btn">Back</a>
-		<a href="#" class="btn">Save</a>
-	</div>
+	<h1>Create a idea</h1>
+	<form id='articleForm' method='post'>
+		<div id="title-box">
+			<Label for='title' class='' id='titleLabel'> Title </Label>
+			<input type='text' class='ElementOfArticleCreation' id='title-textarea' name='title'
+				value='{{article.title}}'>
+		</div>
+		<div id="description-box">
+			<Label for='description' class='' id='descriptionLabel'> Description </Label>
+			<textarea name='description' class='ElementOfArticleCreation'
+				id='description-textarea'> {{article.description}} </textarea>
+		</div>
+		<div id="journal-box">
+			<Label for='content' class='' id='journalLabel'> </Label>
+			<textarea name='content' class='journal-box' id='journal-textarea' rows=10> {{article.content}} </textarea>
+		</div>
+		<button type='submit' class='ElementOfArticleCreation Button' id='submitButton'> Create </button>
+	</form>
 </body>
+<script>
+	document.getElementById("submitButton").addEventListener("click", async (event) => {
+		event.preventDefault();
+		function constructObjectFromForm() {
+			const title = document.getElementById("title-textarea").value;
+			const description = document.getElementById("description-textarea").value;
+			const journal = document.getElementById("journal-textarea").value;
+			const data = {
+				// id: (Math.floor(Math.random() * (99999999 - 10 + 1)) + 10),
+				userID: 1,
+				title: title,
+				description: description,
+				journal: journal,
+				files: 0
+			};
+			return data;
+		}
+		let userID = 1;
+		let response = await fetch(`/newIdea/${userID}`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(constructObjectFromForm())
+		});
+	});
+</script>
 
 </html>

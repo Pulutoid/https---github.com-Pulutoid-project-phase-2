@@ -79,6 +79,26 @@ async function main() {
     });
 
 
+
+    app.post('/newIdea/:id', async (req, res) => {
+
+        console.log('post new invoked');
+        console.log(req.body);
+
+
+        result = await databaseModule.addJournal(req.body);
+
+
+
+
+        res.send(JSON.stringify(result));
+
+
+
+    });
+
+
+
     app.listen(3000, () => {
         console.log('Server listening on port 3000');
     });
