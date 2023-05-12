@@ -47,6 +47,11 @@ async function main() {
     })
 
 
+    app.get('/signup.html', async (req, res) => {
+        const html = nunjucks.render('signup.html');
+        res.send(html);
+    })
+
     app.get('/profile.html', async (req, res) => {
 
 
@@ -86,7 +91,7 @@ async function main() {
         console.log(req.body);
 
 
-        result = await databaseModule.addJournal(req.body);
+        result = await databaseModule.addIdea(req.body);
 
 
 
@@ -97,6 +102,24 @@ async function main() {
 
     });
 
+
+
+    app.post('/newProfile/:id', async (req, res) => {
+
+        console.log('post new invoked');
+        console.log(req.body);
+
+
+        result = await databaseModule.newProfile(req.body);
+
+
+
+
+        res.send(JSON.stringify(result));
+
+
+
+    });
 
 
     app.listen(3000, () => {

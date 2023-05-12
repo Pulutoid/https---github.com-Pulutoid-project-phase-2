@@ -55,10 +55,24 @@ async function addIdea(journalData) {
 }
 
 
+async function newProfile(newUserData) {
+    const db = await openConnectionToDB();
+
+    const result = await db.run('INSERT INTO profiles (name, gender, birthdate, creationDate) VALUES (?, ?, ?, ?)', [newUserData.name, newUserData.gender, newUserData.birthdate, newUserData.creationDate]);
+
+    // return metadata about the inserted row
+    return result;
+
+}
+
+
 module.exports = {
     openConnectionToDB,
     getAllJournals,
     getProfile,
-    addJournal
+    addJournal,
+    addIdea,
+    newProfile
+
 
 };
