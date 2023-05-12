@@ -352,3 +352,58 @@
 }
 
 /* End for Animation for NavButton 4 */
+
+.navButton5 {
+  top: 864px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Inter;
+}
+
+/* Start for Animation for NavButton 5 */
+
+.navButton5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton5:hover span {
+  padding-right: 25px;
+}
+
+.navButton5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 5 */
+
+
+.row :hover  {
+
+  cursor: pointer;
+
+
+
+}
