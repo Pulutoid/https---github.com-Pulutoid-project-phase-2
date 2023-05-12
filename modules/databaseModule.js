@@ -20,6 +20,14 @@ async function getAllJournals() {
     return journals
 }
 
+async function getAllJournalsByProfile(profile_id) {
+    const db = await openConnectionToDB();
+    // console.log('database connection opened');
+    const journals = await db.all('SELECT * FROM journals where userID = ?', profile_id);
+    return journals
+}
+
+
 async function getProfile(profile_id) {
 
 
@@ -66,13 +74,44 @@ async function newProfile(newUserData) {
 }
 
 
+async function getAllProfiles() {
+
+    const db = await openConnectionToDB();
+
+    const profiles = await db.all('SELECT * FROM profiles');
+
+    console.log('profiles are ')
+    console.log(profiles)
+    return profiles;
+
+
+}
+
+
+async function getJournalByID(journalID) {
+
+    const db = await openConnectionToDB();
+
+    const journal = await db.all('SELECT * FROM journals WHERE id = ?', journalID);
+
+
+    return journal;
+
+
+}
+
 module.exports = {
     openConnectionToDB,
     getAllJournals,
     getProfile,
     addJournal,
     addIdea,
-    newProfile
+    newProfile,
+    getAllProfiles,
+    getAllJournalsByProfile,
+    getJournalByID
+
+
 
 
 };

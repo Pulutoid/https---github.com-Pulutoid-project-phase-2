@@ -2,9 +2,11 @@ const express = require('express')
 const nunjucks = require('nunjucks')
 const databaseModule = require('./modules/databaseModule.js');
 const app = express()
+const cookieParser = require('cookie-parser');
 app.use(express.static('.'))
 app.use(express.json());
 
+app.use(cookieParser());
 
 nunjucks.configure('./views', {
     autoescape: true,
@@ -19,22 +21,52 @@ async function main() {
     app.get('/', async (req, res) => {
 
         let journals = await databaseModule.getAllJournals();
+        // let journals = await databaseModule.getAllJournalsByProfile();
+
 
         // console.log(journals)
         //render resulting html and send it 
         const html = nunjucks.render('index.html', { journals });
         res.send(html);
     })
+
+
+
+
+
+
     app.get('/index.html', async (req, res) => {
 
+        // Access the profile cookie
+        let currentProfile = req.cookies.profile;
+        console.log(`current profile id is ${currentProfile}`);
 
-        let journals = await databaseModule.getAllJournals();
-        // console.log(journals)
+        let journals = await databaseModule.getAllJournalsByProfile(currentProfile);
+
+
+        console.log(journals)
 
         //render resulting html and send it 
         const html = nunjucks.render('index.html', { journals });
         res.send(html);
     })
+
+
+
+    app.get('/ideaExpanded.html/:id', async (req, res) => {
+
+
+
+        let journal = await databaseModule.getJournalByID(req.params.id);
+
+
+        console.log(journal)
+
+        //render resulting html and send it 
+        const html = nunjucks.render('ideaExpanded.html', { journal });
+        res.send(html);
+    })
+
 
     app.get('/CreateJournal.html', async (req, res) => {
         const html = nunjucks.render('CreateJournal.html');
@@ -68,8 +100,8 @@ async function main() {
 
     app.post('/newJournal/:id', async (req, res) => {
 
-        console.log('post new invoked');
-        console.log(req.body);
+        // console.log('post new invoked');
+        // console.log(req.body);
 
 
         result = await databaseModule.addJournal(req.body);
@@ -87,8 +119,8 @@ async function main() {
 
     app.post('/newIdea/:id', async (req, res) => {
 
-        console.log('post new invoked');
-        console.log(req.body);
+        // console.log('post new invoked');
+        // console.log(req.body);
 
 
         result = await databaseModule.addIdea(req.body);
@@ -106,8 +138,8 @@ async function main() {
 
     app.post('/newProfile/:id', async (req, res) => {
 
-        console.log('post new invoked');
-        console.log(req.body);
+        // console.log('post new invoked');
+        // console.log(req.body);
 
 
         result = await databaseModule.newProfile(req.body);
@@ -120,6 +152,20 @@ async function main() {
 
 
     });
+
+
+    app.get('/chooseProfile.html', async (req, res) => {
+
+        let profiles = await databaseModule.getAllProfiles();
+
+
+
+        // console.log('choose profile called')
+        // console.log(profiles)
+        const html = nunjucks.render('chooseProfile.html', { profiles });
+        res.send(html);
+    })
+
 
 
     app.listen(3000, () => {

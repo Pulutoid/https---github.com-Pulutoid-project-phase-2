@@ -2,7 +2,7 @@
 {% block main %}
 <div class="grid-container">
     {% for journal in journals %}
-    <div class="idea">
+    <div class="idea" data-profile-id="{{journal.id}}">
         <div class="rectangle">
             <span class="title">{{journal.title}}</span>
             <span class="body">{{journal.description}}</span>
