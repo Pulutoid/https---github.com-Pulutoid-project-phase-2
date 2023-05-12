@@ -10,11 +10,22 @@ nunjucks.configure('./views', {
 });
 
 app.get('/', async (req, res) => {
-    const html = nunjucks.render('index.html');
+
+    let journals = await databaseModule.getAllJournals();
+
+    console.log(journals)
+    //render resulting html and send it 
+    const html = nunjucks.render('index.html', { journals });
     res.send(html);
 })
 app.get('/index.html', async (req, res) => {
-    const html = nunjucks.render('index.html');
+
+
+    let journals = await databaseModule.getAllJournals();
+    console.log(journals)
+
+    //render resulting html and send it 
+    const html = nunjucks.render('index.html', { journals });
     res.send(html);
 })
 
@@ -35,15 +46,6 @@ app.get('/CreateIdea.html', async (req, res) => {
 
 // app.get('/profile.html/:id', async (req, res) => {
 app.get('/profile.html', async (req, res) => {
-
-
-    //locate and initilizde template
-    nunjucks.configure('views', {
-        autoescape: false,
-        express: app
-    });
-
-
 
 
     let profile = await databaseModule.getProfile(1);
