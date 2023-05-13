@@ -18,6 +18,20 @@ async function main() {
 
     await databaseModule.openConnectionToDB();
 
+
+    app.get("/getCookie", async (req, res) => {
+
+
+
+        if (req.cookies.profile != null) {
+            res.send(req.cookies.profile)
+        }
+        else {
+
+            res.send(1)
+        }
+    })
+
     app.get('/', async (req, res) => {
         // Access the profile cookie
         let currentProfile = req.cookies.profile;
