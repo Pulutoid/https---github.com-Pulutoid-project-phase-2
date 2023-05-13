@@ -1,0 +1,408 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 30vw;
+  /* grid-gap: 20px; */
+  /* margin: 20px; */
+  background-image: url(img/pexels-fwstudio-1297321.png);
+  padding: 10px;
+}
+
+
+.content {
+  /* centering the page */
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+}
+
+#background {
+  background-image: url(img/pexels-fwstudio-1297321.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  top: 41px;
+  left: 65px;
+  width: 138px;
+  height: 168px;
+  position: absolute;
+  border-color: transparent;
+}
+
+.hoverLogo {
+  background-color: transparent;
+  border: none;
+  color: transparent;
+  cursor: pointer;
+}
+
+.createButton {
+  top: 908px;
+  left: 27px;
+  width: 104px;
+  height: 104px;
+  position: absolute;
+}
+
+/* Button animation start */
+.newBut {
+  border-radius: 50%;
+  border: none;
+  top: 0px;
+  left: 0px;
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  transition: all 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.newBut span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.newBut span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.newBut:hover span {
+  padding-bottom: 15px;
+}
+
+.newBut:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Button animation end */
+
+.rectangle {
+  /* A rectangle for the journals/ideas */
+  display: inline-block;
+  height: 300px;
+  width: 280px;
+  border-radius: 25px;
+  background-color: #fceee5;
+}
+
+ .idea:hover {
+  cursor: pointer;
+}
+
+.idea {
+
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 20px;
+
+  font-size: 30px;
+  text-align: center;
+}
+.idea1 {
+  /* top: 147px; */
+  left: 221px;
+  /* width: 279px; */
+  /* height: 254px; */
+  padding: 0;
+  /* position: absolute; */
+
+}
+
+.idea2 {
+  /* top: 147px; */
+  left: 720px;
+  /* width: 279px; */
+  /* height: 254px; */
+  /* position: absolute; */
+}
+
+.body {
+  display: inline-block;
+ margin: 10px 10px;
+ color: black;
+ font-size: 20px;
+ text-align: left;
+ font-family: 'Indie Flower';
+ margin: 0;
+ padding: 0;
+
+}
+
+.title {
+  margin: 10px 10px;
+  color: black;
+  font-size: 32px;
+  text-align: left;
+  font-family: 'Indie Flower';
+
+}
+
+.navBar {
+  top: 0px;
+  /* left: 1166px; */
+  width: 282px;
+  height: 1024px;
+  position: absolute;
+  right: -9px;
+}
+
+.navBarBackground {
+  left: -1px;
+  width: 275px;
+  bottom: 0px;
+  height: 1024px;
+  position: absolute;
+  border-color: solid #fff4f4;
+  border-width: 5px;
+  border-radius: 22px 0 0 22px;
+}
+
+.navButton1 {
+  top: 272px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Inter;
+}
+
+/* Start for Animation for NavButton 1 */
+
+.navButton1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton1:hover span {
+  padding-right: 25px;
+}
+
+.navButton1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 1 */
+
+.navButton2 {
+  top: 420px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Inter;
+}
+
+/* Start for Animation for NavButton 2 */
+
+.navButton2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton2:hover span {
+  padding-right: 25px;
+}
+
+.navButton2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 2 */
+
+.navButton3 {
+  top: 568px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Cambria;
+}
+
+/* Start for Animation for NavButton 3 */
+
+.navButton3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton3:hover span {
+  padding-right: 25px;
+}
+
+.navButton3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 3 */
+
+
+.navButton4 {
+  top: 716px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Inter;
+}
+
+/* Start for Animation for NavButton 4 */
+
+.navButton4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton4:hover span {
+  padding-right: 25px;
+}
+
+.navButton4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 4 */
+
+.navButton5 {
+  top: 864px;
+  right: 20px;
+  width: 252px;
+  height: 51px;
+  display: block;
+  position: absolute;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #9b44f0;
+  color: #9b44f0;
+  background-color: #fff4f4;
+  text-align: center;
+  font-size: 24px;
+  font-family: Inter;
+}
+
+/* Start for Animation for NavButton 5 */
+
+.navButton5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.navButton5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.navButton5:hover span {
+  padding-right: 25px;
+}
+
+.navButton5:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* End for Animation for NavButton 5 */
+
+
+.row :hover  {
+
+  cursor: pointer;
+
+
+
+}
