@@ -22,6 +22,8 @@ document.getElementById("submitButton").addEventListener("click", async (event) 
         },
         body: JSON.stringify(constructObjectFromForm())
     });
+
+    window.location.href = "/chooseProfile.html";
 });
 
 

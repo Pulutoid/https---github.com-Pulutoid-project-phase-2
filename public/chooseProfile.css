@@ -1,0 +1,54 @@
+body {
+    
+        background-image: url(../img/pexels-fwstudio-1297321.png);
+        /* background-repeat:repeat-x; */
+        background-size: cover;
+     
+    
+}
+
+.card.mb-3 {
+
+
+    background-color: rgb(242, 228, 243);
+    /* background-repeat:repeat-x; */
+    background-size: cover;
+ 
+
+}
+
+.card.mb-3:hover {
+
+
+    background-color: rgb(233, 212, 235);
+    /* background-repeat:repeat-x; */
+    background-size: cover;
+    cursor: pointer;
+ 
+
+}
+
+
+
+
+
+.navBar {
+    top: 0px;
+    /* left: 1166px; */
+    width: 282px;
+    height: 1024px;
+    position: absolute;
+    right: -9px;
+  }
+  
+  .navBarBackground {
+    left: -1px;
+    width: 275px;
+    bottom: 0px;
+    height: 1024px;
+    position: absolute;
+    border-color: solid #fff4f4;
+    border-width: 5px;
+    border-radius: 22px 0 0 22px;
+  }
+  

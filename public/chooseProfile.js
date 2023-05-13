@@ -12,9 +12,10 @@ document.getElementById("backButton").addEventListener("click", (event) => {
 
 
 Array.from(document.querySelectorAll(".row.g-0")).forEach((each) => {
-    each.addEventListener("click", (event) => {
+    each.addEventListener("click", async (event) => {
         console.log("card clicked");
-        chooseProfile(event);
+        await chooseProfile(event);
+        window.location.href = "/"
     });
 });
 
