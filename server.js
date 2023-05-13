@@ -70,7 +70,7 @@ async function main() {
 
 
 
-    app.get('/ideaExpanded.html/:id', async (req, res) => {
+    app.get('/IdeaExpanded.html/:id', async (req, res) => {
 
 
 
@@ -82,7 +82,7 @@ async function main() {
         console.log(journal)
 
         //render resulting html and send it 
-        const html = nunjucks.render('ideaExpanded.html', { journal });
+        const html = nunjucks.render('IdeaExpanded.html', { journal });
         res.send(html);
     })
 
@@ -191,6 +191,22 @@ async function main() {
         console.log('Server listening on port 3000');
     });
 
+
+    app.get('/allJournals.html', async (req, res) => {
+
+        // Access the profile cookie
+        let currentProfile = req.cookies.profile;
+        console.log(`current profile id is ${currentProfile}`);
+
+        let journals = await databaseModule.AllJournals(currentProfile);
+
+
+        // console.log(journals)
+
+        //render resulting html and send it 
+        const html = nunjucks.render('index.html', { journals });
+        res.send(html);
+    })
 
 }
 main()
