@@ -60,6 +60,8 @@ async function main() {
 
         let journals = await databaseModule.getAllJournalsByProfile(currentProfile);
 
+        // let journals = await databaseModule.allJournals(currentProfile);
+
 
         // console.log(journals)
 
@@ -192,19 +194,19 @@ async function main() {
     });
 
 
-    app.get('/allJournals.html', async (req, res) => {
+    app.get('/AllJournals.html', async (req, res) => {
 
         // Access the profile cookie
         let currentProfile = req.cookies.profile;
         console.log(`current profile id is ${currentProfile}`);
 
-        let journals = await databaseModule.allJournals(currentProfile);
+        let journals = await databaseModule.allJournals(req.cookies.profile);
 
 
         // console.log(journals)
 
         //render resulting html and send it 
-        const html = nunjucks.render('index.html', { journals });
+        const html = nunjucks.render('AllJournals.html', { journals });
         res.send(html);
     })
 

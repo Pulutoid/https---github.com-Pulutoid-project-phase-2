@@ -41,31 +41,6 @@ async function getProfile(profile_id) {
     return returnedRow;
 }
 
-async function allJournals(profile_id) {
-
-
-
-    const db = await openConnectionToDB();
-
-    returnedRow = await db.get('SELECT * FROM journals WHERE isJournal = 1')
-
-    // console.log(returnedRow);
-
-    return returnedRow;
-}
-
-async function allIdeas() {
-
-
-
-    const db = await openConnectionToDB();
-
-    returnedRow = await db.get('SELECT * FROM journals WHERE isIdea = 1 ')
-
-    // console.log(returnedRow);
-
-    return returnedRow;
-}
 
 
 
@@ -125,6 +100,37 @@ async function getJournalByID(journalID) {
     return journal;
 
 
+}
+
+
+async function allJournals(profile_id) {
+
+
+
+    const db = await openConnectionToDB();
+
+    const returnedRow = await db.all('SELECT * FROM journals WHERE userID = ? and isJournal = ?', profile_id, 1);
+
+    console.log(returnedRow)
+
+    // console.log(returnedRow);
+
+    return returnedRow;
+}
+
+async function allIdeas(profile_id) {
+
+
+
+    const db = await openConnectionToDB();
+
+    const returnedRow = await db.all('SELECT * FROM journals WHERE userID = ? and isIdea = ?', profile_id, 1);
+
+    console.log(returnedRow)
+
+    // console.log(returnedRow);
+
+    return returnedRow;
 }
 
 module.exports = {
