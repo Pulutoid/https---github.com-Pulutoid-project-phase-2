@@ -5,6 +5,21 @@
   position: relative;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 30vw;
+  /* grid-gap: 20px; */
+  /* margin: 20px; */
+  background-image: url(../img/pexels-fwstudio-1297321.png);
+  background-size: cover;
+  /* background-repeat:repeat-x; */
+
+  padding: 10px;
+  padding-left: 20px ;
+}
+
+
+
 #background {
   background-image: url(../img/pexels-fwstudio-1297321.png);
   /* background-repeat:repeat-x; */
