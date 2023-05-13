@@ -192,7 +192,7 @@ async function main() {
     });
 
 
-    app.get('/allJournals.html', async (req, res) => {
+    app.get('/AllJournals.html', async (req, res) => {
 
         // Access the profile cookie
         let currentProfile = req.cookies.profile;
