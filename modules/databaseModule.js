@@ -31,7 +31,6 @@ async function getAllJournalsByProfile(profile_id) {
 async function getProfile(profile_id) {
 
 
-    profile_id = 1; //for testing purposes only. it should take any profile id
 
     const db = await openConnectionToDB();
 

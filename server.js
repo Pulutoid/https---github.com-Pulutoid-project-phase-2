@@ -26,7 +26,7 @@ async function main() {
         let journals = await databaseModule.getAllJournalsByProfile(currentProfile);
 
 
-        console.log(journals)
+        // console.log(journals)
 
         //render resulting html and send it 
         const html = nunjucks.render('index.html', { journals });
@@ -47,7 +47,7 @@ async function main() {
         let journals = await databaseModule.getAllJournalsByProfile(currentProfile);
 
 
-        console.log(journals)
+        // console.log(journals)
 
         //render resulting html and send it 
         const html = nunjucks.render('index.html', { journals });
@@ -92,11 +92,11 @@ async function main() {
     app.get('/profile.html', async (req, res) => {
 
 
-        let profile = await databaseModule.getProfile(1);
+        let profile = await databaseModule.getProfile(req.cookies.profile);
 
 
 
-
+        console.log(profile)
         const html = nunjucks.render('profile.html', { profile });
         res.send(html);
 
