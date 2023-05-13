@@ -74,10 +74,6 @@ async function main() {
 
     app.get('/IdeaExpanded.html/:id', async (req, res) => {
 
-
-
-
-
         let journal = await databaseModule.getJournalByID(req.params.id);
 
 
@@ -207,6 +203,22 @@ async function main() {
 
         //render resulting html and send it 
         const html = nunjucks.render('AllJournals.html', { journals });
+        res.send(html);
+    })
+
+    app.get('/AllIdeas.html', async (req, res) => {
+
+        // Access the profile cookie
+        let currentProfile = req.cookies.profile;
+        console.log(`current profile id is ${currentProfile}`);
+
+        let journals = await databaseModule.allIdeas(req.cookies.profile);
+
+
+        // console.log(journals)
+
+        //render resulting html and send it 
+        const html = nunjucks.render('AllIdeas.html', { journals });
         res.send(html);
     })
 
