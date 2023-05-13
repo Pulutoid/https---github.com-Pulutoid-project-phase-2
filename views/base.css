@@ -1,13 +1,3 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 25vw 30vw;
-  /* grid-gap: 20px; */
-  /* margin: 20px; */
-  background-image: url(img/pexels-fwstudio-1297321.png);
-  padding: 10px;
-}
-
-
 .content {
   /* centering the page */
   max-width: 1440px;
@@ -17,8 +7,9 @@
 
 #background {
   background-image: url(img/pexels-fwstudio-1297321.png);
-  background-repeat: no-repeat;
+  /* background-repeat:repeat-x; */
   background-size: cover;
+  
 }
 
 .logo {
