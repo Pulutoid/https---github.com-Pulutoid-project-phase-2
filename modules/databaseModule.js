@@ -41,7 +41,7 @@ async function getProfile(profile_id) {
     return returnedRow;
 }
 
-async function allJournals() {
+async function allJournals(profile_id) {
 
 
 

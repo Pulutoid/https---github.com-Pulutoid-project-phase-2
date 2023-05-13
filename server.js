@@ -198,7 +198,7 @@ async function main() {
         let currentProfile = req.cookies.profile;
         console.log(`current profile id is ${currentProfile}`);
 
-        let journals = await databaseModule.AllJournals(currentProfile);
+        let journals = await databaseModule.allJournals(currentProfile);
 
 
         // console.log(journals)
