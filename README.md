@@ -2,7 +2,7 @@
 
 # Journal Website using HTML, CSS, and Bootstrap
 
-This is a simple journal website created using HTML, CSS, and Bootstrap. The purpose of this project is to showcase my skills in front-end web development.
+This is a simple journal website created using HTML, CSS, and Bootstrap. The purpose of this project is to showcase our skills in front-end web development.
 
 ## Features
 
@@ -11,13 +11,17 @@ This is a simple journal website created using HTML, CSS, and Bootstrap. The pur
 - Home page that displays the latest journal entries
 - Archive page that displays all previous journal entries
 - About page that provides information about the website and the author
-<br>
+  <br>
 
 ## Technologies Used
 
 - HTML
 - CSS
 - Javascript
+- Node.js
+- express
+- cookie-parser
+- nunjucks
 
 ## Getting Started
 
@@ -30,7 +34,7 @@ git clone https://github.com/Pulutoid/https---github.com-Pulutoid-project-phase-
 ## How to Run:
 
 1. Using URL: https://pulutoid.github.io/https---github.com-Pulutoid-project-phase-2/
-2. Run index.html through your browser similar to localhost html.
+2. Run views/index.html using node js.
 
 ## Contributing
 
