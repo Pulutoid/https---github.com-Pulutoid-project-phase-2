@@ -92,6 +92,55 @@
 
 /* Button animation end */
 
+.createButton1 {
+  top: 750px;
+  left: 27px;
+  width: 104px;
+  height: 104px;
+  position: absolute;
+}
+
+/* Button2 animation start */
+.newBut1 {
+  border-radius: 50%;
+  border: none;
+  top: 0px;
+  left: 0px;
+  width: 104px;
+  height: 104px;
+  position: absolute;
+  transition: all 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.newBut1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.newBut1 span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.newBut1:hover span {
+  padding-bottom: 15px;
+}
+
+.newBut1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Button2 animation end */
+
 .rectangle {
   /* A rectangle for the journals/ideas */
   display: inline-block;
