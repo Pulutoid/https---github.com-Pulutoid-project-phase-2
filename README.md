@@ -34,7 +34,7 @@ git clone https://github.com/Pulutoid/https---github.com-Pulutoid-project-phase-
 ## How to Run:
 
 1. Using URL: https://pulutoid.github.io/https---github.com-Pulutoid-project-phase-2/
-2. Run views/index.html using node js.
+2. Run server.js using node js.
 
 ## Contributing
 
